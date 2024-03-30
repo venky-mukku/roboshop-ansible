@@ -13,56 +13,8 @@
 
 
 
-=========
-- name: install and run nginx
-  hosts: web
-  become: yes
-  tasks:
-  - name: install nginx
-    ansible.builtin.package:
-      name: nginx
-      state: present
 
-  - name: run nginx
-    ansible.builtin.service:
-       name: nginx
-       state: started
-
-
-=============
-
-
-- name: checking the debug module
-  hosts: localhost
-  vars:
-     cource: devops
-     cloud: aws
-     certificatation: solution architect
-  become: yes
-  tasks:
-  - name: task debug
-    ansible.builtin.debug:
-      msg: "hi this is the debug module for {{cource}} and hosting on the {{cloud}}, The person has the certification{{certificatation}}"
-
-===========================
-
-- name: variables enter in the prompt
-  hosts: localhost
-  become: yes
-  vars_prompt:
-  - name: USERNAME
-    prompt: please enter the password
-    private: no
-
-  - name: PASSWORD
-    prompt: please enter the password
-    private: yes
-
-  tasks:
-  - name: debug the username and password
-
-    ansible.builtin.debug:
-       msg: "print the {{USERNAME}}, print the password is {{PASSWORD}}"
+    
   
 
 
