@@ -1,0 +1,8 @@
+- name: variable checking
+  hosts: localhost 
+  become: yes
+  tasks:
+  - name: check the variable at different level
+    ansible.builtin.debug: 
+       msg: "hi we are checking {{person}}", good {{wishes}}
+    

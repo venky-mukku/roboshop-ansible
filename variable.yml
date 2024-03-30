@@ -15,3 +15,6 @@
 
     ansible.builtin.debug:
        msg: "print the {{USERNAME}}, print the password is {{PASSWORD}}"
+
+    person: "venky from file"
+    wishes: "mornin g from file" 
